@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Really Sorry 😞💜</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Animated Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientMove 6s infinite alternate ease-in-out;
+            display: grid;
+            place-items: center;
+            margin: 0;
+            overflow: auto; /* Ensures scrolling if content overflows */
+            min-height: 100vh; /* Ensures the body is at least the height of the viewport */
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Main Container */
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+            background-color: rgba(199, 233, 244,0.9);
+        }
+
+        p {
+            transition: color 0.3s ease-in-out;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        h1:hover, p:hover {
+            color: #8e44ad;
+        }
+
+        .cute-img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid;
+            border-color: #8e44ad;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .cute-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Buttons Side-by-Side */
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: #8e44ad;
+            transform: scale(1.05);
+        }
+
+        /* Tribute Page */
+        .tribute-container {
+            text-align: center;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for vertical alignment */
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .image-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            display: block;
+            margin: 0 auto;
+            
+        }
+
+        .back-btn:hover {
+            background: #8e44ad;
+            transform: scale(1.05);
+        }
+
+        /* Centering "See Something Cool" Button */
+        .center-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Apology Page -->
+    <div class="container" id="apology-page">
+        <h1 id="apology-text">Yo Mayank, I'm Really Sorry! 😞💜</h1>
+        <p id="message">I know I bailed on our plan, and that was pretty lame of me. You're an awesome friend, and I feel really bad for it. Can we still be cool??? 🙏</p>
+        <img id="cute-img" src="home-page.jpeg"  class="cute-img">
+        
+        <div class="buttons">
+            <button id="yes-btn" class="btn">Yeah, It's Cool 😎</button>
+            <button id="no-btn" class="btn">Nope 😡</button>
+        </div>
+    </div>
+
+    <!-- Tribute Page -->
+    <div class="container hidden" id="tribute-page">
+        <h1>Mayank Waiker - The Forgiving Legend 🏆</h1>
+        <div class="tribute-container">
+            <div class="image-box">
+                <img style="width: 150px;" src="mayank.jpeg" alt="Mayank Waiker">
+                <p>The Greatest Forgiver - Mayank Waiker</p>
+            </div>
+            <div class="image-box">
+                <img style="width: 150px;" src="third-2.jpeg">
+                <p>Me, Feeling Blessed for your Forgiveness 🙌</p>
+            </div>
+            <div class="image-box">
+                <img style="width: 150px;" src="third-3.jpeg">
+                <p>Friendship Always Wins! 🤜🤛</p>
+            </div>
+        </div>
+        <button onclick="showApologyPage()" class="back-btn">Back to Apology Page</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("no-btn");
+        const yesBtn = document.getElementById("yes-btn");
+        const apologyPage = document.getElementById("apology-page");
+        const tributePage = document.getElementById("tribute-page");
+
+        // No Button Moves Randomly
+        noBtn.addEventListener("mouseenter", function() {
+            let maxX = 200; // Moves within a small area
+            let maxY = 50; 
+
+            let newX = Math.random() * maxX;
+            let newY = Math.random() * maxY;
+
+            noBtn.style.transform = `translate(${newX}px, ${newY}px)`;
+        });
+
+        // Yes Button Click - Show Tribute Button
+        yesBtn.addEventListener("click", function() {
+            document.getElementById("apology-text").innerText = "You're the GOAT! 🐐✨";
+            document.getElementById("message").innerText = "Thanks for forgiving me, bro!";
+            document.getElementById("cute-img").src = "second-page.jpeg";
+
+            document.querySelector(".buttons").innerHTML = `<div class="center-btn"><button onclick="showTributePage()" class="btn">See Something Cool 🔥</button></div>`;
+        });
+
+        function showTributePage() {
+            apologyPage.classList.add("hidden");
+            tributePage.classList.remove("hidden");
+        }
+
+        function showApologyPage() {
+            tributePage.classList.add("hidden");
+            apologyPage.classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
